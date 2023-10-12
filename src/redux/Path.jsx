@@ -10,6 +10,8 @@ import Invoice from "../pages/Invoice";
 import TicTacToe from "../pages/TicTacToe";
 import Piano from "../pages/Piano";
 import Home from "../pages/Home";
+import MemoryMatch from "../pages/MemoryMatch";
+import SnakeGame from "../pages/SnakeGame";
 
 const Path = () => {
   return (
@@ -19,6 +21,7 @@ const Path = () => {
           <Route path="/" element={<Home />} />
           <Route path="/toDoList" element={<TodoList />} />
           <Route path="/ticTacToe" element={<TicTacToe />} />
+          <Route path="/snakeGame" element={<SnakeGame />} />
           <Route path="/meterBill" element={<MeterBill />} />
           <Route path="/stopWatch" element={<Stopwatch />} />
           <Route path="/currencyExchange" element={<CurrencyExchange />} />
@@ -26,6 +29,7 @@ const Path = () => {
           <Route path="/areaCalculator" element={<AreaCalculate />} />
           <Route path="/invoice" element={<Invoice />} />
           <Route path="/piano" element={<Piano />} />
+          <Route path="/memoryMatch" element={<MemoryMatch />} />
         </Routes>
       </BrowserRouter>
     </div>
