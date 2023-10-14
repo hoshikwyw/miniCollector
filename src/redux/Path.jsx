@@ -6,7 +6,6 @@ import Stopwatch from "../pages/Stopwatch";
 import CurrencyExchange from "../pages/CurrencyExchange";
 import Calculator from "../pages/Calculator";
 import AreaCalculate from "../pages/AreaCalculate";
-import Invoice from "../pages/Invoice";
 import TicTacToe from "../pages/TicTacToe";
 import Piano from "../pages/Piano";
 import Home from "../pages/Home";
@@ -27,7 +26,6 @@ const Path = () => {
           <Route path="/currencyExchange" element={<CurrencyExchange />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/areaCalculator" element={<AreaCalculate />} />
-          <Route path="/invoice" element={<Invoice />} />
           <Route path="/piano" element={<Piano />} />
           <Route path="/memoryMatch" element={<MemoryMatch />} />
         </Routes>

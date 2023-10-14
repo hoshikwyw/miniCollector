@@ -1,25 +1,17 @@
 import React from "react";
 import Path from "./redux/Path";
 import Navbar from "./components/Navbar";
-import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import "./components/style.css";
-import BottomBar from "./components/BottomBar";
 
 const App = () => {
   return (
-    <div className=" relative flex">
-      <div className=" bg-amber-200 w-[20%] sidebar">
-        <SideBar />
-      </div>
-      <div className=" bottombar bg-sky-400">
-        <BottomBar />
-      </div>
+    <div className=" relative flex bg-[#67A2E7]">
       <div className=" bg-slate-50 w-full">
         <div className=" bg-slate-400">
           <Navbar />
         </div>
-        <div className=" px-5">
+        <div className="">
           <Path />
         </div>
         <div className=" bg-green-200">
