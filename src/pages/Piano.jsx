@@ -3,7 +3,7 @@ import React from 'react'
 const Piano = () => {
   return (
     <div>
-      Piano
+      piano
     </div>
   )
 }
