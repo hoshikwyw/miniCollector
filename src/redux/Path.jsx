@@ -10,6 +10,9 @@ import TicTacToe from "../pages/TicTacToe";
 import Home from "../pages/Home";
 import MemoryMatch from "../pages/MemoryMatch";
 import SnakeGame from "../pages/SnakeGame";
+import Profile from "../pages/Profile";
+import Settings from "../pages/Settings";
+import Ads from "../pages/Ads";
 
 const Path = () => {
   return (
@@ -26,6 +29,9 @@ const Path = () => {
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/areaCalculator" element={<AreaCalculate />} />
           <Route path="/memoryMatch" element={<MemoryMatch />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/ads" element={<Ads />} />
         </Routes>
       </BrowserRouter>
     </div>
