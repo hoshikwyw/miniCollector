@@ -3,7 +3,6 @@ export const links = [
   { linkName: "Tic Tac Toe Game", to: "/ticTacToe" },
   { linkName: "Snake Game", to: "/snakeGame" },
   { linkName: "Memory Match Game", to: "/memoryMatch" },
-  { linkName: "Piano Game", to: "/piano" },
   { linkName: "Meter Bill", to: "/meterBill" },
   { linkName: "StopWatch", to: "/stopWatch" },
   { linkName: "Currency Exchange", to: "/currencyExchange" },

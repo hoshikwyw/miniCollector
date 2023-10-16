@@ -13,7 +13,7 @@ const Home = () => {
             to={page?.to}
             className=" flex flex-col w-full justify-center items-center">
             <HomeCard />
-            <button className=" bg-slate-500 px-3 py-1 rounded-md text-white font-semibold tracking-widest bgShadow mt-3">
+            <button className=" px-3 py-1 text-white font-semibold tracking-widest bgShadow mt-3">
               {page?.linkName}
             </button>
           </Link>

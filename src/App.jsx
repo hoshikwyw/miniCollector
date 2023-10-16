@@ -3,10 +3,12 @@ import Path from "./redux/Path";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./components/style.css";
+import SideBar from "./components/SideBar";
 
 const App = () => {
   return (
-    <div className=" relative flex bg-[#67A2E7]">
+    <div className=" relative flex bg-[#67A2E7] overflow-x-hidden">
+      <SideBar />
       <div className=" bg-slate-50 w-full">
         <div className=" bg-slate-400">
           <Navbar />

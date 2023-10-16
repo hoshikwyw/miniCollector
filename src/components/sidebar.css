@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  position: absolute;
+  z-index: 200;
+  top: 20px;
+  right: 0;
+  width: 80px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+}
+.nav-content .toggle-btn,
+.nav-content span a {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  box-shadow: 35px 35px 68px 0px rgba(74, 144, 226, 0.5),
+    inset -6px -6px 16px 0px rgba(255, 255, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+.nav-content .toggle-btn {
+  font-size: 35px;
+  color: #000000;
+  z-index: 100;
+  cursor: pointer;
+  transform: rotate(50deg);
+  transition: all 0.6s ease;
+}
+nav.open .toggle-btn {
+  transform: rotate(0deg);
+}
+.nav-content span {
+  position: absolute;
+  z-index: 50;
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+nav.open .nav-content span {
+  transform: rotate(calc(var(--i) * (360deg / 8))) translateY(120px);
+  opacity: 1;
+}
+.nav-content span a {
+  text-decoration: none;
+  transform: rotate(45deg);
+}
+.nav-content span a .navIcon {
+  font-size: 24px;
+  color: #000000;
+  transform: rotate(calc(var(--i) * (360deg / -8)));
+  transition: 0.2s;
+  z-index: 100;
+}
+.nav-content span a:hover .navIcon {
+  opacity: 1;
+}

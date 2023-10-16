@@ -7,7 +7,6 @@ import CurrencyExchange from "../pages/CurrencyExchange";
 import Calculator from "../pages/Calculator";
 import AreaCalculate from "../pages/AreaCalculate";
 import TicTacToe from "../pages/TicTacToe";
-import Piano from "../pages/Piano";
 import Home from "../pages/Home";
 import MemoryMatch from "../pages/MemoryMatch";
 import SnakeGame from "../pages/SnakeGame";
@@ -26,7 +25,6 @@ const Path = () => {
           <Route path="/currencyExchange" element={<CurrencyExchange />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/areaCalculator" element={<AreaCalculate />} />
-          <Route path="/piano" element={<Piano />} />
           <Route path="/memoryMatch" element={<MemoryMatch />} />
         </Routes>
       </BrowserRouter>
