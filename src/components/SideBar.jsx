@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./sidebar.css";
+import "./css/sidebar.css";
 import {
   BsFillXCircleFill,
   BsPersonCircle,

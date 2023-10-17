@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
-import "../components/stopwatch.css";
+import "../components/css/stopwatch.css";
 
 const Stopwatch = () => {
   const [time, setTime] = useState({

@@ -2,7 +2,6 @@ import React from "react";
 import Path from "./redux/Path";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "./components/style.css";
 import SideBar from "./components/SideBar";
 import "./App.css"
 
