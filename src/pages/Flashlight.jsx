@@ -40,10 +40,12 @@ const Flashlight = () => {
   };
 
   return (
-    <div className=" h-screen font-semibold">
+    <div className=" font-semibold">
       <div id="flashLight" style={flashlightStyle}></div>
       <p className=" text-red-800">
-      I want to address the fact that you're upset with me, and I'm really sorry for whatever it is that I've done. I value our relationship so much, and I hate to see you upset because of my actions.
+        I want to address the fact that you're upset with me, and I'm really
+        sorry for whatever it is that I've done. I value our relationship so
+        much, and I hate to see you upset because of my actions.
       </p>
       <p>
         I want you to know that I love you, and I'm genuinely sorry for my
@@ -67,9 +69,12 @@ const Flashlight = () => {
         understand why you're upset. Please, share your thoughts with me.
       </p>
       <p className=" text-red-500">
-        I really do care about you and your feelings. I love you more than I can say.
+        I really do care about you and your feelings. I love you more than I can
+        say.
       </p>
-      <p className=" text-red-800 font-bold text-4xl">I Love you Hnin Aye Wai...</p>
+      <p className=" text-red-800 font-bold text-4xl">
+        I Love you Hnin Aye Wai...
+      </p>
     </div>
   );
 };
