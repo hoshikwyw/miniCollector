@@ -3,10 +3,17 @@ import HomeCard from "../components/HomeCard";
 import { Link } from "react-router-dom";
 import { links } from "../assets/PagesLinks";
 import "../App.css"
+import Clock from "../components/Clock";
+import Weather from "../components/Weather";
 
 const Home = () => {
   return (
-    <div className=" flex flex-wrap gap-5 py-5 items-center justify-center bg-[#67A2E7]">
+    <div className=" bg-[#67A2E7] w-[80%] mx-auto py-2">
+      <div className=" flex justify-between items-center gap-10">
+        <Clock />
+        <Weather />
+      </div>
+    <div className=" flex flex-wrap gap-5 py-5 items-center justify-center">
       {links?.map((page) => (
         <div className="">
           <Link
@@ -19,6 +26,7 @@ const Home = () => {
           </Link>
         </div>
       ))}
+    </div>
     </div>
   );
 };
