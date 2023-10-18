@@ -13,6 +13,7 @@ import SnakeGame from "../pages/SnakeGame";
 import Profile from "../pages/Profile";
 import Settings from "../pages/Settings";
 import Ads from "../pages/Ads";
+import Flashlight from "../pages/Flashlight";
 
 const Path = () => {
   return (
@@ -32,6 +33,7 @@ const Path = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/ads" element={<Ads />} />
+          <Route path="/flashLight" element={<Flashlight />} />
         </Routes>
       </BrowserRouter>
     </div>

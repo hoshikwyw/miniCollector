@@ -8,4 +8,5 @@ export const links = [
   { linkName: "Currency Exchange", to: "/currencyExchange" },
   { linkName: "Calculator", to: "/calculator" },
   { linkName: "Area Calculator", to: "/areaCalculator" },
+  { linkName: "Flash Light", to: "/flashLight" },
 ];
