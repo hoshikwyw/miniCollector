@@ -21,8 +21,8 @@ const Clock = () => {
   const formatSecond = second < 10 ? `0${second}` : second
 
   return (
-    <div className=" bgShadow w-[50%] p-2">
-      <h2 className=" text-center font-semibold text-xl font-mono text-white">
+    <div className=" bgShadow w-full md:w-[50%] p-2">
+      <h2 className=" text-center font-semibold text-3xl uppercase font-mono text-white">
         Yangon <span>time</span>
       </h2>
       <div className=" flex w-full justify-center items-center gap-3 my-2">
