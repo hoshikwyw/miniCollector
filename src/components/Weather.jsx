@@ -3,6 +3,11 @@ import {FcSearch} from "react-icons/fc"
 import clear from "./weatherImg/clear.png"
 import clouds from "./weatherImg/clouds.png"
 import drizzle from "./weatherImg/drizzle.png"
+import mist from "./weatherImg/mist.png"
+import humidity from "./weatherImg/humidity.png"
+import rain from "./weatherImg/rain.png"
+import snow from "./weatherImg/snow.png"
+import wind from "./weatherImg/wind.png"
 
 
 const Weather = () => {
