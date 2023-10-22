@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import back from "../images/back.jpg";
-import card1 from "../images/card1.jpg";
-import card2 from "../images/card2.jpg";
-import card3 from "../images/card3.jpg";
-import card4 from "../images/card4.jpg";
+import back from "../MemoryImages/back.jpg";
+import card1 from "../MemoryImages/card1.jpg";
+import card2 from "../MemoryImages/card2.jpg";
+import card3 from "../MemoryImages/card3.jpg";
+import card4 from "../MemoryImages/card4.jpg";
 
 const MemoryMatch = () => {
   const [cards, setCards] = useState([]);

@@ -34,7 +34,6 @@ const Weather = () => {
       </div>
       </div>
     </div>
-    // 29be3ab5d8a584353d178ff602fdcfaa
   )
 }
 
