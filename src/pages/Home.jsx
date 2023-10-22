@@ -19,7 +19,7 @@ const Home = () => {
           <Link
             to={page?.to}
             className=" flex flex-col w-full justify-center items-center">
-            <HomeCard />
+            <HomeCard image={page?.image} />
             <button className=" px-3 py-1 text-white font-semibold tracking-widest bgShadow mt-3">
               {page?.linkName}
             </button>
