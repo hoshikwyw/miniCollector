@@ -7,7 +7,7 @@ import "./App.css"
 
 const App = () => {
   return (
-    <div className=" relative flex bg-[#67A2E7] overflow-x-hidden">
+    <div className=" relative flex mainBg overflow-x-hidden">
       <SideBar />
       <div className=" w-full">
         <div className=" bg-[#ffffff72] shadow-md">
@@ -16,7 +16,7 @@ const App = () => {
         <div className="">
           <Path />
         </div>
-        <div className=" bg-green-200">
+        <div className=" bg-[#cde7fcc8] shadow-md">
           <Footer />
         </div>
       </div>

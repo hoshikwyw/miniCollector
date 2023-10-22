@@ -71,7 +71,7 @@ const Stopwatch = () => {
   };
 
   return (
-    <div className=" w-full h-screen flex justify-center items-center bg-[#67A2E7]">
+    <div className=" w-full h-screen flex justify-center items-center mainBg">
       <div className="container w-[50%] h-fit p-10 flex flex-col justify-center items-center gap-5">
         <h2 className=" font-mono uppercase font-bold text-2xl tracking-wider text-[#fff]">
           StopWatch

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      footer
+    <div className=' rounded-none p-3 text-center font-semibold text-sm tracking-wider'>
+      @ Copyright 2023 Oro's mini projects collector
     </div>
   )
 }
