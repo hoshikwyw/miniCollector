@@ -5,13 +5,19 @@ const Calculator = () => {
     currentValue: "0",
     operator: null,
     previousValue: null,
+    isOperatorClicked: false,
+    expression: "",
   });
 
   const handleNumber = (value) => {
     setState((prevState) => ({
       ...prevState,
       currentValue:
-        prevState.currentValue === "0" ? value : prevState.currentValue + value,
+        prevState.currentValue === "0" || prevState.isOperatorClicked
+          ? value
+          : prevState.currentValue + value,
+      isOperatorClicked: false,
+      expression: prevState.expression + value, 
     }));
   };
 
@@ -20,43 +26,28 @@ const Calculator = () => {
       ...prevState,
       operator: operator,
       previousValue: prevState.currentValue,
+      isOperatorClicked: true,
+      expression: prevState.expression + " " + operator + " ",
     }));
   };
 
   const handleEqual = () => {
-    const { currentValue, operator, previousValue } = state;
+    const { currentValue, operator, previousValue, expression } = state;
 
-    switch (operator) {
-      case "+":
-        setState((prevState) => ({
-          ...prevState,
-          currentValue:
-            Number(prevState.currentValue) + Number(prevState.previousValue),
-        }));
-        break;
-      case "-":
-        setState((prevState) => ({
-          ...prevState,
-          currentValue:
-            Number(prevState.previousValue) - Number(prevState.currentValue),
-        }));
-        break;
-      case "*":
-        setState((prevState) => ({
-          ...prevState,
-          currentValue:
-            Number(prevState.previousValue) * Number(prevState.currentValue),
-        }));
-        break;
-      case "/":
-        setState((prevState) => ({
-          ...prevState,
-          currentValue:
-            Number(prevState.previousValue) / Number(prevState.currentValue),
-        }));
-        break;
-      default:
-        break;
+    if (operator) {
+      const result = performOperation(
+        parseFloat(previousValue),
+        operator,
+        parseFloat(currentValue)
+      );
+
+      setState({
+        currentValue: result.toString(),
+        operator: null,
+        previousValue: null,
+        isOperatorClicked: false,
+        expression: expression + " = " + result,
+      });
     }
   };
 
@@ -65,17 +56,43 @@ const Calculator = () => {
       currentValue: "0",
       operator: null,
       previousValue: null,
+      isOperatorClicked: false,
+      expression: "", 
     });
+  };
+
+  const performOperation = (num1, operator, num2) => {
+    switch (operator) {
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "*":
+        return num1 * num2;
+      case "/":
+        if (num2 !== 0) {
+          return num1 / num2;
+        }
+        return "Error";
+      default:
+        return num2;
+    }
   };
 
   return (
     <div className=" min-h-screen bgShadow w-[50%] mx-auto m-5 py-3">
-      <input
+       <input
+        type="text"
+        value={state.expression} // Display the expression
+        readOnly
+        className="w-[80%] mx-auto flex justify-center items-center px-3 py-1"
+      />
+      {/* <input
         type="text"
         value={state.currentValue}
         readOnly
         className=" w-[80%] mx-auto flex justify-center items-center px-3 py-1"
-      />
+      /> */}
       <div className=" flex flex-col text-xl gap-2 w-[90%] mx-auto">
         <div className=" flex justify-between">
           <button onClick={() => handleNumber("1")}>1</button>
