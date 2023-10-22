@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {FcSearch} from "react-icons/fc"
 import clear from "./weatherImg/clear.png"
 import clouds from "./weatherImg/clouds.png"
@@ -8,26 +8,33 @@ import humidity from "./weatherImg/humidity.png"
 import rain from "./weatherImg/rain.png"
 import snow from "./weatherImg/snow.png"
 import wind from "./weatherImg/wind.png"
+import { useGetDataQuery } from '../services/weather'
 
 
 const Weather = () => {
+
+  const [location, setLocation] = useState('Myanmar')
+  const {data, error, isLoading} = useGetDataQuery(location)
+  console.log(data);
+
   return (
     <div className=' bgShadow w-full md:w-[50%] flex flex-col justify-center items-center p-3 cursor-pointer'>
       <div className=' flex justify-center items-center gap-3'>
-        <input type="text" name="" id="" className=" bg-[#ffffff] rounded-xl outline-none px-3 py-1" placeholder='Search City . . .' />
-        <h2 className=' text-2xl'><FcSearch /></h2>
+        <input type="text" value={location} onChange={e => setLocation(e.target.value)} className=" bg-[#ffffff] rounded-xl outline-none px-3 py-1 city-input" placeholder='Search City . . .' />
+        <button className=' text-2xl' onClick={() => useGetDataQuery(location)}><FcSearch /></button>
       </div>
-      <div className=' flex w-full justify-between px-5 py-3 items-center text-white'>
+      <div className=' flex w-[80%] justify-between px-5 py-3 items-center text-white'>
       <div>
-        <h2>City name</h2>
-        <h2>temperature</h2>
+        <h2 className=' font-semibold text-sm tracking-widest'>Yangon</h2>
+        <h2 className=' font-semibold text-4xl tracking-wider'>27°C</h2>
       </div>
-      <div className="">
-        <img src="./weatherImg/clear.png" alt="clear" />
-        <h2>weather condition</h2>
+      <div className=" flex flex-col justify-center items-center">
+        <img src={clear} alt="clear" className=' w-10' />
+        <h2 className=' uppercase font-semibold tracking-wider'>clear</h2>
       </div>
       </div>
     </div>
+    // 29be3ab5d8a584353d178ff602fdcfaa
   )
 }
 
