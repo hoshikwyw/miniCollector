@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class SnakeGame extends Component {
   constructor(props) {
@@ -20,18 +20,18 @@ class SnakeGame extends Component {
 
   componentDidMount() {
     this.startGame();
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   componentWillUnmount() {
     clearInterval(this.state.gameInterval);
-    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   drawSnake = () => {
-    const ctx = this.canvasRef.current.getContext('2d');
+    const ctx = this.canvasRef.current.getContext("2d");
     this.state.snake.forEach((segment) => {
-      ctx.fillStyle = 'green';
+      ctx.fillStyle = "green";
       ctx.fillRect(
         segment.x * this.state.gridSize,
         segment.y * this.state.gridSize,
@@ -42,8 +42,8 @@ class SnakeGame extends Component {
   };
 
   drawApple = () => {
-    const ctx = this.canvasRef.current.getContext('2d');
-    ctx.fillStyle = 'red';
+    const ctx = this.canvasRef.current.getContext("2d");
+    ctx.fillStyle = "red";
     ctx.fillRect(
       this.state.apple.x * this.state.gridSize,
       this.state.apple.y * this.state.gridSize,
@@ -53,14 +53,21 @@ class SnakeGame extends Component {
   };
 
   update = () => {
-    const head = { x: this.state.snake[0].x + this.state.dx, y: this.state.snake[0].y + this.state.dy };
+    const head = {
+      x: this.state.snake[0].x + this.state.dx,
+      y: this.state.snake[0].y + this.state.dy,
+    };
 
     if (head.x === this.state.apple.x && head.y === this.state.apple.y) {
       const newSnake = [...this.state.snake];
       newSnake.unshift(this.state.apple);
       const newApple = {
-        x: Math.floor(Math.random() * (this.state.canvasSize / this.state.gridSize)),
-        y: Math.floor(Math.random() * (this.state.canvasSize / this.state.gridSize)),
+        x: Math.floor(
+          Math.random() * (this.state.canvasSize / this.state.gridSize)
+        ),
+        y: Math.floor(
+          Math.random() * (this.state.canvasSize / this.state.gridSize)
+        ),
       };
       this.setState({ snake: newSnake, apple: newApple });
     } else {
@@ -72,7 +79,7 @@ class SnakeGame extends Component {
   };
 
   clearCanvas = () => {
-    const ctx = this.canvasRef.current.getContext('2d');
+    const ctx = this.canvasRef.current.getContext("2d");
     ctx.clearRect(0, 0, this.state.canvasSize, this.state.canvasSize);
     // Add grid lines
     for (let x = 0; x < this.state.canvasSize; x += this.state.gridSize) {
@@ -83,13 +90,13 @@ class SnakeGame extends Component {
       ctx.moveTo(0, y);
       ctx.lineTo(this.state.canvasSize, y);
     }
-    ctx.strokeStyle = '#ddd';
+    ctx.strokeStyle = "#fff";
     ctx.stroke();
   };
 
   gameOver = () => {
     clearInterval(this.state.gameInterval);
-    alert('Game Over!');
+    alert("Game Over!");
     this.resetGame();
   };
 
@@ -140,19 +147,19 @@ class SnakeGame extends Component {
   handleKeyDown = (event) => {
     if (!this.state.gameRunning) return;
     switch (event.key) {
-      case 'ArrowUp':
+      case "ArrowUp":
         if (this.state.dy === 1) return;
         this.setState({ dx: 0, dy: -1 });
         break;
-      case 'ArrowDown':
+      case "ArrowDown":
         if (this.state.dy === -1) return;
         this.setState({ dx: 0, dy: 1 });
         break;
-      case 'ArrowLeft':
+      case "ArrowLeft":
         if (this.state.dx === 1) return;
         this.setState({ dx: -1, dy: 0 });
         break;
-      case 'ArrowRight':
+      case "ArrowRight":
         if (this.state.dx === -1) return;
         this.setState({ dx: 1, dy: 0 });
         break;
@@ -161,21 +168,21 @@ class SnakeGame extends Component {
 
   render() {
     return (
-      <div className=' min-h-screen flex flex-col gap-4 items-center'>
-        <button onClick={this.startGame} disabled={this.state.gameRunning}>
-          Start Game
-        </button>
-        <div id="game-container" style={{ display: 'block' }}>
-          <canvas
-            ref={this.canvasRef}
-            id="game-board"
-            width={this.state.canvasSize}
-            height={this.state.canvasSize}
-          ></canvas>
-        </div>
+      <div
+        id="game-container">
+        <canvas
+          ref={this.canvasRef}
+          id="game-board"
+          width={this.state.canvasSize}
+          height={this.state.canvasSize}
+          style={{
+            border: "1px solid #000", // Add a border to the canvas
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)", // Add a shadow
+            backgroundColor: "#f0f0f0", // Set the canvas background color
+          }}></canvas>
       </div>
     );
   }
 }
 
-export default SnakeGame
+export default SnakeGame;
