@@ -8,7 +8,7 @@ export const weatherApi = createApi({
   endpoints: (builder) => ({
     getData: builder.query({
       query: (location) =>
-        `weather?q=${location}&appid={29be3ab5d8a584353d178ff602fdcfaa}`,
+        `weather?lat=44.34&lon=10.99&appid={"29be3ab5d8a584353d178ff602fdcfaa"}`,
     }),
   }),
 });
