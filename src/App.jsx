@@ -7,13 +7,13 @@ import "./App.css"
 
 const App = () => {
   return (
-    <div className=" relative flex mainBg overflow-x-hidden">
+    <div className=" relative flex mainBg overflow-x-hidden ">
       <SideBar />
       <div className=" w-full">
         <div className=" bg-[#ffffff72] shadow-md">
           <Navbar />
         </div>
-        <div className="">
+        <div className=" min-h-screen">
           <Path />
         </div>
         <div className=" bg-[#cde7fcc8] shadow-md">

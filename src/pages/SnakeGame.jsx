@@ -172,7 +172,7 @@ class SnakeGame extends Component {
 
   render() {
     return (
-      <div className=" min-h-screen flex flex-col items-center justify-center">
+      <div className=" flex flex-col items-center justify-center">
         <div id="game-container" className=" h-fit">
           <canvas
             ref={this.canvasRef}

@@ -14,6 +14,7 @@ import { useGetDataQuery } from '../services/weather'
 const Weather = () => {
 
   const [location, setLocation] = useState('Myanmar')
+ console.log(location);  
   const {data, error, isLoading} = useGetDataQuery(location)
   console.log(data);
 
