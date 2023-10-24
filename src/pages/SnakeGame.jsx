@@ -166,20 +166,26 @@ class SnakeGame extends Component {
     }
   };
 
+  handleStartGameClick = () => {
+    this.startGame();
+  };
+
   render() {
     return (
-      <div
-        id="game-container">
-        <canvas
-          ref={this.canvasRef}
-          id="game-board"
-          width={this.state.canvasSize}
-          height={this.state.canvasSize}
-          style={{
-            border: "1px solid #000", // Add a border to the canvas
-            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)", // Add a shadow
-            backgroundColor: "#f0f0f0", // Set the canvas background color
-          }}></canvas>
+      <div className=" min-h-screen flex flex-col items-center justify-center">
+        <div id="game-container" className=" h-fit">
+          <canvas
+            ref={this.canvasRef}
+            id="game-board"
+            width={this.state.canvasSize}
+            height={this.state.canvasSize}
+            style={{
+              border: "1px solid #000", // Add a border to the canvas
+              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)", // Add a shadow
+              backgroundColor: "#f0f0f0", // Set the canvas background color
+            }}></canvas>
+        </div>
+             <button onClick={this.handleStartGameClick}>Start Game</button>
       </div>
     );
   }
