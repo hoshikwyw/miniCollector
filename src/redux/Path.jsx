@@ -14,6 +14,7 @@ import Profile from "../pages/Profile";
 import Settings from "../pages/Settings";
 import Ads from "../pages/Ads";
 import Flashlight from "../pages/Flashlight";
+import ForHAW from "../pages/ForHAW";
 
 const Path = () => {
   return (
@@ -34,6 +35,7 @@ const Path = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path="/ads" element={<Ads />} />
           <Route path="/flashLight" element={<Flashlight />} />
+          <Route path="/haw" element={<ForHAW/>} />
         </Routes>
       </BrowserRouter>
     </div>
