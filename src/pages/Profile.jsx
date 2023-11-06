@@ -9,6 +9,7 @@ const Profile = () => {
 <h1>Hi this is day 4 coding from mobile codespace</h1>
 <h2>hi this is day 5 coding from mobile codespace..</h2>
 <h1>hi this is day 6 from mobile codespace and today is the last day</h1>
+<h1>hi this is the tired day 2 update</h1>
     </div>
   )
 }
