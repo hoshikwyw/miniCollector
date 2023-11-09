@@ -1,15 +1,14 @@
 import React from 'react'
+import pfp from "../MemoryImages/card1.jpg"
 
 const Profile = () => {
   return (
     <div className=' min-h:screen flex justify-center items-center'>
-      <h2>Hi this is profile page</h2>
-      <h2>Hi this is writing from codespace</h2>
-      <h2>Hi this is day3 coding from mobile codespace</h2>
-<h1>Hi this is day 4 coding from mobile codespace</h1>
-<h2>hi this is day 5 coding from mobile codespace..</h2>
-<h1>hi this is day 6 from mobile codespace and today is the last day</h1>
-<h1>hi this is the tired day 2 update</h1>
+      <div className=' mt-5'>
+        <img src={pfp} alt="" className=' w-28 h-28 rounded-full'/>
+        <h2>Name</h2>
+        <h2>dob</h2>
+      </div>
     </div>
   )
 }
