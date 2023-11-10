@@ -8,6 +8,8 @@ const Profile = () => {
         <img src={pfp} alt="" className=' w-28 h-28 rounded-full'/>
         <h2>Name</h2>
         <h2>dob</h2>
+        <h2>Address</h2>
+        <h2>gmail</h2>
       </div>
     </div>
   )
