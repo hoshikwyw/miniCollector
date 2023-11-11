@@ -11,6 +11,9 @@ const Profile = () => {
         <h2>Address</h2>
         <h2>gmail</h2>
       </div>
+      <div className="">
+        <h2></h2>
+      </div>
     </div>
   )
 }
