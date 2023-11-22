@@ -3,16 +3,13 @@ import pfp from "../MemoryImages/card1.jpg"
 
 const Profile = () => {
   return (
-    <div className=' min-h:screen flex justify-center items-center'>
-      <div className=' mt-5'>
-        <img src={pfp} alt="" className=' w-28 h-28 rounded-full'/>
-        <h2>Name</h2>
-        <h2>dob</h2>
-        <h2>Address</h2>
-        <h2>gmail</h2>
+    <div className=' min-h:screen flex w-[95%] mx-auto mt-5'>
+      <div className=' bgShadow h-[400px] w-[50%]'>
+        Hello
+        
       </div>
-      <div className="">
-        <h2></h2>
+      <div className=" bgShadow h-[400px] w-[50%]">
+        
       </div>
     </div>
   )
