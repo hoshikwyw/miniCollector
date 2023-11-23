@@ -13,11 +13,16 @@ const Profile = () => {
           <h2>Recent Played : Tic Tac Toe </h2>
         </div>
         <div className="">
-          <table>
-            <tr>
+          <table className=" flex flex-col">
+            <tr className=" flex gap-2 border bg-white">
               <th>Game</th>
               <th>Score</th>
               <th>Time</th>
+            </tr>
+            <tr className=" flex gap-2 border bg-slate-500">
+              <td>Snake</td>
+              <td>10</td>
+              <td>11:00</td>
             </tr>
           </table>
         </div>
