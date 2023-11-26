@@ -24,6 +24,16 @@ const Profile = () => {
               <td>10</td>
               <td>11:00</td>
             </tr>
+            <tr className=" flex gap-2 border bg-slate-500">
+              <td>Snake</td>
+              <td>10</td>
+              <td>11:00</td>
+            </tr>
+            <tr className=" flex gap-2 border bg-slate-500">
+              <td>Snake</td>
+              <td>10</td>
+              <td>11:00</td>
+            </tr>
           </table>
         </div>
       </div>
