@@ -3,7 +3,8 @@ import React from 'react'
 const Settings = () => {
   return (
     <div>
-      settings
+      <h2>settings</h2>
+      <h2>This is the setting page for mini collector</h2>
     </div>
   )
 }
