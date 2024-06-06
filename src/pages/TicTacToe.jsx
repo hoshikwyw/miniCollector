@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SubNavBar from '../components/SubNavBar';
 
 const TicTacToe = () => {
 
@@ -67,44 +68,47 @@ const TicTacToe = () => {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center p-5 rounded shadow-lg shadow-slate-600 min-h-screen">
-      <h2 className=" mb-4 text-2xl font-bold font-serif text-white">
-        Tic Tac Toe Game
-      </h2>
-      {!gameStarted ? (
-        <button
-          className="px-4 py-2 bg-gray-500 hover:bg-gray-400 text-white rounded"
-          onClick={startGame}>
-          Start Game
-        </button>
-      ) : (
-        <div className="w-64">
-          <div className=" grid grid-cols-3 gap-4 text-2xl font-bold">
-            {board.map((cell, index) => renderCell(index))}
+    <>
+      <SubNavBar title="TicTacToe" />
+      <div className=" flex flex-col justify-center items-center p-5 rounded min-h-[calc(100vh-150px)]">
+        <h2 className=" mb-4 text-2xl font-bold font-serif text-white">
+          Tic Tac Toe Game
+        </h2>
+        {!gameStarted ? (
+          <button
+            className="px-4 py-2 bg-gray-500 hover:bg-gray-400 text-white rounded"
+            onClick={startGame}>
+            Start Game
+          </button>
+        ) : (
+          <div className="w-64">
+            <div className=" grid grid-cols-3 gap-4 text-2xl font-bold">
+              {board.map((cell, index) => renderCell(index))}
+            </div>
+            {winner && (
+              <div className="mt-4 text-center">
+                <p className="font-bold text-xl text-white">{winner} wins!</p>
+                <button
+                  className=" mt-2 px-4 py-2 bg-gray-500 hover:bg-gray-400 text-white font-semibold rounded"
+                  onClick={resetGame}>
+                  Play Again
+                </button>
+              </div>
+            )}
+            {!winner && board.every((cell) => cell !== "") && (
+              <div className="mt-4 text-center">
+                <p className="font-bold text-xl">It's a draw!</p>
+                <button
+                  className="mt-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                  onClick={resetGame}>
+                  Restart
+                </button>
+              </div>
+            )}
           </div>
-          {winner && (
-            <div className="mt-4 text-center">
-              <p className="font-bold text-xl text-white">{winner} wins!</p>
-              <button
-                className=" mt-2 px-4 py-2 bg-gray-500 hover:bg-gray-400 text-white font-semibold rounded"
-                onClick={resetGame}>
-                Play Again
-              </button>
-            </div>
-          )}
-          {!winner && board.every((cell) => cell !== "") && (
-            <div className="mt-4 text-center">
-              <p className="font-bold text-xl">It's a draw!</p>
-              <button
-                className="mt-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
-                onClick={resetGame}>
-                Restart
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SubNavBar from "../components/SubNavBar";
 
 const Calculator = () => {
   const [state, setState] = useState({
@@ -80,7 +81,9 @@ const Calculator = () => {
   };
 
   return (
-    <div className=" min-h-screen bgShadow w-[50%] mx-auto m-5 py-3">
+    <>
+    <SubNavBar title="calculator" />
+    <div className=" min-h-[calc(100vh-190px)] bgShadow w-[50%] mx-auto m-5 py-3">
        <input
         type="text"
         value={state.expression} // Display the expression
@@ -120,6 +123,7 @@ const Calculator = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
