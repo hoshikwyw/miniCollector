@@ -26,15 +26,15 @@ const Clock = () => {
         Yangon <span>time</span>
       </h2>
       <div className=" flex w-full justify-center items-center gap-3 my-2">
-        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded text-slate-600">
+        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded-lg text-slate-600">
           {formatHour}
         </div>
         <h2 className=" text-3xl">:</h2>
-        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded text-slate-600">
+        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded-lg text-slate-600">
           {formatMinute}
         </div>
         <h2 className=" text-3xl">:</h2>
-        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded text-slate-600">
+        <div className=" w-12 text-2xl bg-[#ffffffcb] h-12 flex justify-center items-center font-mono rounded-lg text-slate-600">
           {formatSecond}
         </div>
         <div className=" text-3xl flex justify-center items-center font-semibold text-slate-800">

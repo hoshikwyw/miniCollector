@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SubNavBar from "../components/SubNavBar";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -45,7 +46,9 @@ const TodoList = () => {
   };
 
   return (
-    <div className=" min-h-screen w-[50%] mx-auto bgShadow p-10 my-5">
+    <>
+    <SubNavBar title="todo list" />
+    <div className=" min-h-[calc(100vh-200px)] w-[50%] mx-auto bgShadow p-10 my-5">
       <div className=" flex justify-center items-center">
         <input
           type="text"
@@ -82,6 +85,7 @@ const TodoList = () => {
         ))}
       </ul>
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import "../components/css/stopwatch.css";
+import SubNavBar from "../components/SubNavBar";
 
 const Stopwatch = () => {
   const [time, setTime] = useState({
@@ -71,7 +72,9 @@ const Stopwatch = () => {
   };
 
   return (
-    <div className=" w-full h-screen flex justify-center items-center mainBg">
+    <>
+    <SubNavBar title="StopWatch" />
+    <div className=" w-full min-h-[calc(100vh-150px)] flex justify-center items-center mainBg">
       <div className="container w-[50%] h-fit p-10 flex flex-col justify-center items-center gap-5">
         <h2 className=" font-mono uppercase font-bold text-2xl tracking-wider text-[#fff]">
           StopWatch
@@ -105,6 +108,7 @@ const Stopwatch = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SubNavBar from "../components/SubNavBar";
 
 class SnakeGame extends Component {
   constructor(props) {
@@ -172,7 +173,9 @@ class SnakeGame extends Component {
 
   render() {
     return (
-      <div className=" flex flex-col items-center justify-center">
+      <>
+      <SubNavBar title="snake game" />
+      <div className=" flex flex-col items-center justify-center min-h-[calc(100vh-150px)]">
         <div id="game-container" className=" h-fit">
           <canvas
             ref={this.canvasRef}
@@ -187,6 +190,7 @@ class SnakeGame extends Component {
         </div>
              <button onClick={this.handleStartGameClick}>Start Game</button>
       </div>
+      </>
     );
   }
 }
