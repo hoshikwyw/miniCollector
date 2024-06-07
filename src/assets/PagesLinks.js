@@ -12,5 +12,6 @@ export const links = [
   { linkName: "Flash Light", to: "/flashLight", image: "https://i.pinimg.com/736x/16/24/0c/16240c81c9e8dd34545888a470307581.jpg" },
   { linkName: "Piano", to: "https://oro-piano.netlify.app/", image: "https://i.pinimg.com/474x/cb/33/76/cb337666e7be4409ee76ad3ca34179db.jpg" },
   { linkName: "HAW", to: "/haw" },
-  { linkName: 'Pixel Draw', to: "/gridDraw", image: "https://i.pinimg.com/564x/98/6a/a7/986aa7f5561cf943e38a4013ef1a4c2b.jpg" }
+  { linkName: 'Pixel Draw', to: "/gridDraw", image: "https://i.pinimg.com/564x/98/6a/a7/986aa7f5561cf943e38a4013ef1a4c2b.jpg" },
+  { linkName: 'Text Editor', to: "/textEditor", image: "https://i.pinimg.com/564x/12/81/b1/1281b127bddd496ad3d61a397461b074.jpg" }
 ];
