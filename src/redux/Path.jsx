@@ -16,6 +16,7 @@ import Ads from "../pages/Ads";
 import Flashlight from "../pages/Flashlight";
 import ForHAW from "../pages/ForHAW";
 import GridDraw from "../pages/GridDraw";
+import TextEditor from "../pages/TextEditor";
 
 const Path = () => {
   return (
@@ -38,6 +39,7 @@ const Path = () => {
           <Route path="/flashLight" element={<Flashlight />} />
           <Route path="/haw" element={<ForHAW/>} />
           <Route path="/gridDraw" element={<GridDraw />} />
+          <Route path="/textEditor" element={<TextEditor />} />
         </Routes>
       </BrowserRouter>
     </div>
