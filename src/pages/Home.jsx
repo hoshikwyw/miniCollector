@@ -5,6 +5,7 @@ import { links } from "../assets/PagesLinks";
 import "../App.css";
 import Clock from "../components/Clock";
 import Weather from "../components/Weather";
+import Loading from "./Loading";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <div className=" flex flex-col md:flex-row justify-between items-center gap-10">
         <Clock />
         <Weather />
+        <Loading />
       </div>
       <div className=" flex flex-wrap gap-5 py-5 items-center justify-center">
         {links?.map((page) => (
