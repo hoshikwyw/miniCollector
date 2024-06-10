@@ -72,9 +72,9 @@ const TextEditor = () => {
     return (
         <>
             <SubNavBar title="text editor" />
-            <div className=" min-h-[calc(100vh-190px)] w-[80%] mx-auto bgShadow p-10 my-5">
+            <div className=" min-h-[calc(100vh-250px)] w-[80%] mx-auto bgShadow p-10 my-5">
                 <div className=" w-full h-full">
-                    <div className=' border-2 border-yellow-600 h-[280px]'
+                    <div className=' border border-black mb-3 h-[250px] rounded-lg p-5'
                         id="output"
                         style={{
                             color: color,
@@ -84,29 +84,32 @@ const TextEditor = () => {
                     >
                         {text}
                     </div>
-                    <div className=" border-2 border-red-600">
-                        <div className="form-group w-full flex items-center">
-                            <label htmlFor="text">Text:</label>
+                    <div className="">
+                        <div className=" w-full flex items-center flex-col justify-between">
+                            <div className=' w-full flex justify-between'>
+                                <label htmlFor="text">Text:</label>
+                                <small id="count">{text.length} characters</small>
+                            </div>
                             <textarea
                                 id="text"
-                                className="form-control w-full"
+                                className=" form-control w-full p-3"
                                 value={text}
+                                placeholder='some text ...'
                                 onChange={(e) => setText(e.target.value)}
                             />
-                            <small id="count">{text.length} characters</small>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="color">Color:</label>
-                            <input
-                                type="color"
-                                id="color"
-                                className="form-control"
-                                value={color}
-                                onChange={(e) => setColor(e.target.value)}
-                            />
-                        </div>
-                        <div className=" flex w-full justify-between">
-                            <div className="form-group">
+                        <div className=" flex w-full gap-3 h-full justify-between items-center py-3">
+                            <div className=" flex items-center">
+                                <h1 htmlFor="color">Color:</h1>
+                                <input
+                                    type="color"
+                                    id="color"
+                                    className="form-control"
+                                    value={color}
+                                    onChange={(e) => setColor(e.target.value)}
+                                />
+                            </div>
+                            <div className="">
                                 <label htmlFor="fontSize">Font Size:</label>
                                 <input
                                     type="number"
@@ -116,7 +119,7 @@ const TextEditor = () => {
                                     onChange={(e) => setFontSize(Number(e.target.value))}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="">
                                 <label htmlFor="fontFamily">Font Family:</label>
                                 <select
                                     id="fontFamily"
@@ -131,8 +134,9 @@ const TextEditor = () => {
                                     ))}
                                 </select>
                             </div>
+
                         </div>
-                        <div className="form-group">
+                        <div className="">
                             <button
                                 id="textToSpeech"
                                 className={`btn ${isSpeaking ? 'btn-danger' : 'btn-primary'}`}
