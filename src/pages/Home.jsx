@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <div className=" flex flex-wrap gap-5 py-5 items-center justify-center">
         {links?.map((page) => (
-          <div className="">
+          <div key={page.id} className="">
             <Link
               to={page?.to}
               className=" flex flex-col w-full justify-center items-center">
