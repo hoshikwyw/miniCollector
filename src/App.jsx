@@ -13,7 +13,7 @@ const App = () => {
         <div className=" bg-[#ffffff72] shadow-md">
           <Navbar />
         </div>
-        <div className="">
+        <div className=" min-h-screen">
           <Path />
         </div>
         <div className=" bg-[#cde7fcc8] shadow-md">
