@@ -11,7 +11,6 @@ export const links = [
   { id: 9, linkName: "Area Calculator", to: "/areaCalculator", image: "https://i.pinimg.com/564x/64/01/ac/6401acab792752a3f108b8cc10dc8cc4.jpg" },
   { id: 10, linkName: "Flash Light", to: "/flashLight", image: "https://i.pinimg.com/736x/16/24/0c/16240c81c9e8dd34545888a470307581.jpg" },
   { id: 11, linkName: "Piano", to: "https://oro-piano.netlify.app/", image: "https://i.pinimg.com/474x/cb/33/76/cb337666e7be4409ee76ad3ca34179db.jpg" },
-  { id: 12, linkName: "HAW", to: "/haw" },
-  { id: 13, linkName: 'Pixel Draw', to: "/gridDraw", image: "https://i.pinimg.com/564x/98/6a/a7/986aa7f5561cf943e38a4013ef1a4c2b.jpg" },
-  { id: 14, linkName: 'Text Editor', to: "/textEditor", image: "https://i.pinimg.com/564x/12/81/b1/1281b127bddd496ad3d61a397461b074.jpg" }
+  { id: 12, linkName: 'Pixel Draw', to: "/gridDraw", image: "https://i.pinimg.com/564x/98/6a/a7/986aa7f5561cf943e38a4013ef1a4c2b.jpg" },
+  { id: 13, linkName: 'Text Editor', to: "/textEditor", image: "https://i.pinimg.com/564x/12/81/b1/1281b127bddd496ad3d61a397461b074.jpg" }
 ];

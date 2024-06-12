@@ -5,15 +5,13 @@ import { links } from "../assets/PagesLinks";
 import "../App.css";
 import Clock from "../components/Clock";
 import Weather from "../components/Weather";
-import Loading from "./Loading";
 
 const Home = () => {
   return (
-    <div className=" w-[80%] mx-auto py-2">
-      <div className=" flex flex-col md:flex-row justify-between items-center gap-10">
+    <div className=" mx-auto py-2 flex flex-col items-center justify-center">
+      <div className=" flex flex-col md:flex-row items-center justify-between gap-10 w-[85%]">
         <Clock />
         <Weather />
-        <Loading />
       </div>
       <div className=" flex flex-wrap gap-5 py-5 items-center justify-center">
         {links?.map((page) => (
