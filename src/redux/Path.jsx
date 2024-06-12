@@ -16,6 +16,7 @@ import Ads from "../pages/Ads";
 import Flashlight from "../pages/Flashlight";
 import GridDraw from "../pages/GridDraw";
 import TextEditor from "../pages/TextEditor";
+import QrCodeGenerator from "../pages/QrCodeGenerator";
 
 const Path = () => {
   return (
@@ -38,6 +39,7 @@ const Path = () => {
           <Route path="/flashLight" element={<Flashlight />} />
           <Route path="/gridDraw" element={<GridDraw />} />
           <Route path="/textEditor" element={<TextEditor />} />
+          <Route path="/qrGenerate" element={<QrCodeGenerator />} />
         </Routes>
       </BrowserRouter>
     </div>
