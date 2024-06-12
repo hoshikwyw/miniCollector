@@ -9,8 +9,8 @@ input[type="color" i] {
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 38px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
