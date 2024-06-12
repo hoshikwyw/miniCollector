@@ -83,7 +83,7 @@ const Calculator = () => {
   return (
     <>
     <SubNavBar title="calculator" />
-    <div className=" min-h-[calc(100vh-190px)] bgShadow w-[50%] mx-auto m-5 py-3">
+    <div className=" min-h-[calc(100vh-200px)] bgShadow w-[50%] mx-auto m-5 py-3">
        <input
         type="text"
         value={state.expression} // Display the expression

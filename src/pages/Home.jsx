@@ -8,7 +8,7 @@ import Weather from "../components/Weather";
 
 const Home = () => {
   return (
-    <div className=" mx-auto py-2 flex flex-col items-center justify-center">
+    <div className=" min-h-screen mx-auto py-2 flex flex-col items-center">
       <div className=" flex flex-col md:flex-row items-center justify-between gap-10 w-[85%]">
         <Clock />
         <Weather />

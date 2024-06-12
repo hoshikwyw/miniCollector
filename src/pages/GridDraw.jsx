@@ -162,7 +162,7 @@ const GridDraw = () => {
                             <div className="slider flex flex-col gap-2">
                                 <label htmlFor="height-range" className=' font-semibold'>Grid Height</label>
                                 <div className=" flex items-center gap-2 ">
-                                    <input type="range" id="height-range" min="1" max="31" className=' w-full' />
+                                    <input type="range" id="height-range" min="1" max="28" className=' w-full' />
                                     <span id="height-value">00</span>
                                 </div>
                             </div>
