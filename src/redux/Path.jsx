@@ -17,6 +17,7 @@ import Flashlight from "../pages/Flashlight";
 import GridDraw from "../pages/GridDraw";
 import TextEditor from "../pages/TextEditor";
 import QrCodeGenerator from "../pages/QrCodeGenerator";
+import HangmanGame from "../pages/HangmanGame";
 
 const Path = () => {
   return (
@@ -40,6 +41,7 @@ const Path = () => {
           <Route path="/gridDraw" element={<GridDraw />} />
           <Route path="/textEditor" element={<TextEditor />} />
           <Route path="/qrGenerate" element={<QrCodeGenerator />} />
+          <Route path="/hangmanGame" element={<HangmanGame />} />
         </Routes>
       </BrowserRouter>
     </div>
