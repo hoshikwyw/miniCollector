@@ -13,5 +13,6 @@ export const links = [
   { id: 11, linkName: "Piano", to: "https://oro-piano.netlify.app/", image: "https://i.pinimg.com/474x/cb/33/76/cb337666e7be4409ee76ad3ca34179db.jpg" },
   { id: 12, linkName: 'Pixel Draw', to: "/gridDraw", image: "https://i.pinimg.com/564x/98/6a/a7/986aa7f5561cf943e38a4013ef1a4c2b.jpg" },
   { id: 13, linkName: 'Text Editor', to: "/textEditor", image: "https://i.pinimg.com/564x/12/81/b1/1281b127bddd496ad3d61a397461b074.jpg" },
-  { id: 14, linkName: 'QR code generator', to: "/qrGenerate", image: "https://i.pinimg.com/564x/28/18/14/2818149014269ef919a939c3dfec410d.jpg" }
+  { id: 14, linkName: 'QR code generator', to: "/qrGenerate", image: "https://i.pinimg.com/564x/28/18/14/2818149014269ef919a939c3dfec410d.jpg" },
+  { id: 15, linkName: 'Hangman Game', to: "/hangmanGame", image: "https://i.pinimg.com/564x/f1/9a/d3/f19ad3dbaac9e9e1590e67d85c01a65c.jpg" }
 ];
