@@ -2,6 +2,7 @@ import React from 'react'
 import SubNavBar from '../components/SubNavBar'
 
 const HangmanGame = () => {
+
     return (
         <>
             <SubNavBar title="hangman game" />
