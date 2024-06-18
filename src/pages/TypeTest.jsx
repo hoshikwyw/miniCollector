@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import SubNavBar from '../components/SubNavBar'
+import { paragraphs } from '../assets/Paragraphs'
 
 const TypeTest = () => {
     const [finish, setFinish] = useState(false)
+    const [mistake, setMistake] = useState(0)
+    const [time, setTime] = useState(60)
+    const [timer, setTimer] = useState(0)
+    const [text, setText] = useState("")
+    const [inputText, setInputText] = useState("")
+
     return (
         <>
             <SubNavBar title="Typing speed test" />
