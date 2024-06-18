@@ -18,6 +18,7 @@ import GridDraw from "../pages/GridDraw";
 import TextEditor from "../pages/TextEditor";
 import QrCodeGenerator from "../pages/QrCodeGenerator";
 import HangmanGame from "../pages/HangmanGame";
+import TypeTest from "../pages/TypeTest";
 
 const Path = () => {
   return (
@@ -42,6 +43,7 @@ const Path = () => {
           <Route path="/textEditor" element={<TextEditor />} />
           <Route path="/qrGenerate" element={<QrCodeGenerator />} />
           <Route path="/hangmanGame" element={<HangmanGame />} />
+          <Route path="/typeTest" element={<TypeTest />} />
         </Routes>
       </BrowserRouter>
     </div>
