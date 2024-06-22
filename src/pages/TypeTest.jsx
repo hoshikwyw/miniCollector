@@ -14,18 +14,18 @@ const TypeTest = () => {
         <>
             <SubNavBar title="Typing speed test" />
             <div className=" min-h-[calc(100vh-190px)] w-[70%] mx-auto bgShadow p-10 my-5 relative">
-                <div className="mainArea">
+                <div className="mainArea w-full border-2">
                     <div className=" flex w-full items-center justify-between">
                         <p>Time : 00s</p>
                         <p className="">Mistakes : 0</p>
                     </div>
-                    <div className="showText">
+                    <div className="showText border-2">
                         <p>random text</p>
                     </div>
-                    <div className="typingArea">
-                        <textarea name="" id="" placeholder='type here'></textarea>
+                    <div className="typingArea border-2 w-full">
+                        <textarea name="" id="" placeholder='type here' className=' w-full'></textarea>
                     </div>
-                    <div className="btn-group">
+                    <div className="btn-group border-2">
                         <button className="">Start Type</button>
                     </div>
                 </div>
