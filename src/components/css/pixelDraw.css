@@ -10,21 +10,7 @@
     color: rgb(37, 119, 242);
 }
 
-input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 70px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-}
 
-input[type="color"]::-moz-color-swatch {
-    border-radius: 5px;
-    border: 4px solid transparent;
-}
 
 .gridCol {
     height: 1em;
