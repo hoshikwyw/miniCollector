@@ -43,7 +43,7 @@ export const links = [
   },
   {
     id: 7,
-    linkName: "Currency Exchange",
+    linkName: "Currency Converter",
     to: "/currencyExchange",
     image:
       "https://i.pinimg.com/474x/52/2f/fa/522ffae1679c8dcb5c488e50e7b8dc2b.jpg",
