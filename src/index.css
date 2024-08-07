@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+  
+  .scrollable-hidden-scrollbar {
+    overflow: auto; 
+  }
+  
+  .scrollable-hidden-scrollbar::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  /* Firefox */
+  .scrollable-hidden-scrollbar {
+    scrollbar-width: none; 
+  }
+  
+  /* IE and Edge */
+  .scrollable-hidden-scrollbar {
+    -ms-overflow-style: none;
+  }
+  
