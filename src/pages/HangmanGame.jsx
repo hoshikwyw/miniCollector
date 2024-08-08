@@ -9,6 +9,7 @@ const HangmanGame = () => {
     const [correctLetters, setCorrectLetters] = useState([])
     const [wrongGuessCount, setWrongGuessCount] = useState(0)
     const [hint, setHint] = useState('')
+    const [clicked, setClicked] = useState(false)
 
     const maxGuesses = 6
 
@@ -34,7 +35,10 @@ const HangmanGame = () => {
         if (currentWord.includes(clickedLetter)) {
             const newCorrectLetters = [...correctLetters, clickedLetter]
             setCorrectLetters(newCorrectLetters)
-            if (newCorrectLetters.length === currentWord.length) {
+            const newCorrectLettersCount = currentWord.split('').filter((letter) => newCorrectLetters.includes(letter)).length
+            // console.log(newCorrectLettersCount);
+
+            if (newCorrectLettersCount === currentWord.length) {
                 setLose(true)
                 setWin(true)
             }
@@ -45,6 +49,12 @@ const HangmanGame = () => {
                 setLose(true)
                 setWin(false)
             }
+        }
+    }
+
+    const handleButtonClick = (letter) => {
+        if (!correctLetters.includes(letter)) {
+            handleGuess(letter)
         }
     }
 
@@ -64,30 +74,34 @@ const HangmanGame = () => {
                         </div>
                     </div>
                 )}
-                <div className="mainContainer flex gap-5 min-h-[calc(100vh-213px)]">
+                <div className="mainContainer flex gap-5 min-h-[calc(100vh-190px)]">
                     <div className="imgContainer w-[40%] flex justify-center items-center">
                         <img src={`Imgs/hangmanGameImgs/hangman-${wrongGuessCount}.svg`} alt="Hangman" />
                     </div>
-                    <div className="guessArea w-[60%] bg-white/30 rounded-e-[32px] px-5 py-3">
-                        <ul className="word-display flex flex-row">
+                    <div className=" w-[60%] bg-white/30 rounded-e-[32px] px-5 py-3 flex flex-col gap-5 justify-evenly items-center">
+                        <h1 className=" font-semibold tracking-wider text-lg font-mono text-center break-words my-auto">
+                            <b>{hint}</b>
+                            {/* <b>A building or outdoor area in which plays, movies, or other performances are staged</b> */}
+                        </h1>
+                        <div className=' w-full flex items-center justify-between'>
+                            <h1 className=' font-semibold font-mono text-sm text-gray-500'>
+                                <b>Wrong Count : {wrongGuessCount} / {maxGuesses}</b>
+                            </h1>
+                            <h1 className=' font-semibold font-mono text-sm text-gray-500'><b>Total Letter : {currentWord.length}</b></h1>
+                        </div>
+                        <div className=" word-display flex flex-row w-full items-center justify-center my-auto">
                             {currentWord.split('').map((letter, index) => (
-                                <li key={index} className={`letter ${correctLetters.includes(letter) ? 'guessed' : ''}`}>
-                                    {correctLetters.includes(letter) ? letter : " "}
+                                <li key={index} className={` list-none ml-3 font-semibold text-xl bg-white/30 px-5 py-2 rounded-md`}>
+                                    {correctLetters.includes(letter) ? letter : "_"}
                                 </li>
                             ))}
-                        </ul>
-                        <h1 className="hint-text">
-                            <b>{hint}</b>
-                        </h1>
-                        <h1 className='guesses-text'>
-                            <b>{wrongGuessCount} / {maxGuesses}</b>
-                        </h1>
-                        <div className="keyboard">
+                        </div>
+                        <div className=" mt-auto mx-auto w-full flex whitespace-nowrap flex-wrap py-2 items-center justify-center">
                             {Array.from({ length: 26 }, (_, i) => String.fromCharCode(97 + i)).map(letter => (
                                 <button
                                     key={letter}
-                                    onClick={() => handleGuess(letter)}
-                                    disabled={correctLetters.includes(letter) || lose}
+                                    className={` bg-white/30 px-5 py-2 rounded-md shadow-md font-semibold text-lg ml-5 mb-5 ${correctLetters.includes(letter) ? 'bg-slate-600/60 text-slate-200 pointer-events-none' : ''} `}
+                                    onClick={() => handleButtonClick(letter)}
                                 >
                                     {letter}
                                 </button>
