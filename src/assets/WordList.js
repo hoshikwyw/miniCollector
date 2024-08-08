@@ -1,90 +1,90 @@
 export const words = [
     {
-        word: "Astronaut",
+        word: "astronaut",
         hint: "A person trained to travel in space"
     },
     {
-        word: "Telescope",
+        word: "telescope",
         hint: "An instrument used to observe distant objects"
     },
     {
-        word: "Kangaroo",
+        word: "kangaroo",
         hint: "A marsupial that hops and has a pouch"
     },
     {
-        word: "Fireworks",
+        word: "fireworks",
         hint: "Explosive devices used for celebrations"
     },
     {
-        word: "Robot",
+        word: "robot",
         hint: "A machine capable of carrying out complex tasks"
     },
     {
-        word: "Pyramid",
+        word: "pyramid",
         hint: "An ancient structure found in Egypt"
     },
     {
-        word: "Helicopter",
+        word: "helicopter",
         hint: "An aircraft with rotating blades"
     },
     {
-        word: "Computer",
+        word: "computer",
         hint: "An electronic device for storing and processing data"
     },
     {
-        word: "Zebra",
+        word: "zebra",
         hint: "An animal with black and white stripes"
     },
     {
-        word: "Eagle",
+        word: "eagle",
         hint: "A large bird of prey"
     },
     {
-        word: "Guitar",
+        word: "guitar",
         hint: "A string instrument often used in rock music"
     },
     {
-        word: "Diamond",
+        word: "diamond",
         hint: "A precious gemstone often used in jewelry"
     },
     {
-        word: "Elephant",
+        word: "elephant",
         hint: "The largest land animal"
     },
     {
-        word: "Rainbow",
+        word: "rainbow",
         hint: "An arc of colors visible in the sky"
     },
     {
-        word: "Volcano",
+        word: "volcano",
         hint: "A mountain that erupts lava"
     },
     {
-        word: "Chocolate",
+        word: "chocolate",
         hint: "A sweet treat made from cacao beans"
     },
     {
-        word: "Tornado",
+        word: "tornado",
         hint: "A violent rotating column of air"
     },
     {
-        word: "Butterfly",
+        word: "butterfly",
         hint: "An insect with colorful wings"
     },
     {
-        word: "Sunflower",
+        word: "sunflower",
         hint: "A tall plant with a large yellow flower"
     },
     {
-        word: "Jupiter",
+        word: "jupiter",
         hint: "The largest planet in our solar system"
     },
     {
-        word: "Library",
+        word: "library",
         hint: "A place with many books"
     },
     {
-        word: "Oxygen",
+        word: "oxygen",
         hint: "Essential gas for breathing"
     },
     {
