@@ -1,5 +1,5 @@
 import React from "react";
-import pfp from "../MemoryImages/card1.jpg";
+import pfp from "/MemoryImages/card1.jpg";
 
 const Profile = () => {
   return (
