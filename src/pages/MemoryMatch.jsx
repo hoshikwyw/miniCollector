@@ -1,134 +1,82 @@
 import React, { useEffect, useState } from "react";
-import back from "../MemoryImages/back.jpg";
-import card1 from "../MemoryImages/card1.jpg";
-import card2 from "../MemoryImages/card2.jpg";
-import card3 from "../MemoryImages/card3.jpg";
-import card4 from "../MemoryImages/card4.jpg";
+import SubNavBar from "../components/SubNavBar";
+
+const images = ['/MemoryImages/card1.jpg', '/MemoryImages/card2.jpg', '/MemoryImages/card3.jpg', '/MemoryImages/card4.jpg', '/MemoryImages/card5.jpg'];
+
+const shuffleCards = (arr) => {
+  return arr.sort(() => Math.random() - 0.5);
+}
 
 const MemoryMatch = () => {
   const [cards, setCards] = useState([]);
-  const [turns, setTurns] = useState(0);
-  const [choiceOne, setChoiceOne] = useState(null);
-  const [choiceTwo, setChoiceTwo] = useState(null);
-  const [disabled, setDisabled] = useState(false);
-  const [timer, setTimer] = useState(0);
-  const [intervalId, setIntervalId] = useState(null);
+  const [flippedCard, setFlippedCard] = useState([])
+  const [disabled, setDisabled] = useState(false)
+  let flipped = false
+  let matched = false
+  // console.log(flippedCard);
+
 
   useEffect(() => {
-    const newCards = [];
-    const images = [{id:1 , image: '../images/card1.jpg'}, {id:2 , image: '../images/card2.jpg'}, {id:3 , image: '../images/card3.jpg'}, {id:4 , image: '../images/card4.jpg'}];
-    for (let i = 0; i < images.length; i++) {
-      newCards.push({
-        id: i,
-        image: images[i],
-        flipped: false,
-      });
-      newCards.push({
-        id: i,
-        image: images[i],
-        flipped: false,
-      });
+    const shuffledArray = shuffleCards([...images, ...images])
+    setCards(shuffledArray.map((cardImage, idx) => ({
+      id: idx,
+      cardImage,
+      flipped: false,
+      matched: false
+    })))
+  }, [])
+
+  const handleCardClick = (card) => {
+    if (flippedCard.length === 0) {
+      setFlippedCard([card])
+      flipCard(card?.id)
+    } else if (flippedCard.length === 1) {
+      flipCard(card?.id)
+      checkForMatch(card)
     }
+  }
+  const flipCard = (id) => {
+    setCards((prevCard) => prevCard.map(card => card?.id === id ? { ...card, flipped: !card?.flipped } : card))
+  }
 
-    shuffleArray(newCards);
-    setCards(newCards);
-  }, []);
+  const checkForMatch = (secondCard) => {
+    setDisabled(true)
+    const firstCard = flippedCard[0]
 
-  const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    if (firstCard.cardImage === secondCard.cardImage) {
+      setCards((prevCard) => prevCard.map(card => {
+        card.cardImage === firstCard.cardImage ? { ...card, matched: true, flipped: true } : card
+      }))
     }
-  };
-
-  const handleChoice = (card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
-  };
-
-  const checkForMatch = () => {
-    if (choiceOne && choiceTwo) {
-      if (choiceOne.id === choiceTwo.id) {
-        setCards((prevCards) =>
-          prevCards.map((card) =>
-            card.id === choiceOne.id ? { ...card, matched: true } : card
-          )
-        );
-        setChoiceOne(null);
-        setChoiceTwo(null);
-      } else {
-        setTurns((prevTurns) => prevTurns + 1);
-        setChoiceOne((prevChoice) => {
-          setTimeout(() => {
-            setCards((prevCards) =>
-              prevCards.map((card) =>
-                card.id === prevChoice.id ? { ...card, flipped: false } : card
-              )
-            );
-          }, 1000);
-          return null;
-        });
-        setChoiceTwo((prevChoice) => {
-          setTimeout(() => {
-            setCards((prevCards) =>
-              prevCards.map((card) =>
-                card.id === prevChoice.id ? { ...card, flipped: false } : card
-              )
-            );
-          }, 1000);
-          return null;
-        });
-      }
-    }
-  };
-  const startTimer = () => {
-    setIntervalId(
-      setInterval(() => setTimer((prevTimer) => prevTimer + 1), 1000)
-    );
-  };
-
-  const stopTimer = () => {
-    clearInterval(intervalId);
-  };
-
-  const resetGame = () => {
-    setTurns(0);
-    setTimer(0);
-    setCards((prevCards) =>
-      prevCards.map((card) => ({ ...card, flipped: false, matched: false }))
-    );
-  };
+    setTimeout(() => {
+      setCards(prevCard => prevCard.map(card => card?.id === firstCard?.id || card?.id === secondCard?.id ? { ...card, flipped: false } : card))
+    }, 1000);
+    setFlippedCard([])
+    setDisabled(false)
+  }
 
   return (
-    <div>
-      <h2>Memory Match Game</h2>
-      <div className="grid grid-cols-4 gap-4">
-        {cards.map((card) => (
-          <div
-            key={card.id}
-            className={`card ${card.flipped ? "flipped" : ""} ${
-              card.matched ? "matched" : ""
-            }`}
-            onClick={() => handleChoice(card)}>
-            <img className="card-image" src={card.image} alt={card.id} />
-          </div>
-        ))}
+    <>
+      <SubNavBar title="Memory Match Game" />
+      <div className=" min-h-[calc(100vh-190px)] bgShadow w-[45%] mx-auto m-5 p-10 flex flex-col">
+        <div className=" flex flex-wrap gap-5">
+          {cards.map((card) => (
+            <div
+              className={`relative w-24 h-32 cursor-pointer ${disabled ? ' pointer-events-none' : ''}`}
+              onClick={() => handleCardClick(card)}
+            >
+              <div className={` absolute inset-0 bg-white flex items-center justify-center rounded-lg transition-transform duration-300 ${flipped ? ' rotate-y-180' : ''}`}>
+                <div className={` w-full h-full bg-blue-500 rounded-lg flex items-center justify-center text-3xl text-white ${flipped ? ' opacity-100' : ' opacity-0'}`}>
+                  <img src={card?.cardImage} alt="" />
+                </div>
+              </div>
+              <div className={` absolute inset-0 bg-gray-300 rounded-lg ${flipped ? ' opacity-0' : ' opacity-100'}`}></div>
+            </div>
+          ))}
+        </div>
+
       </div>
-      <div className="mt-4">
-        <button className="btn" onClick={startTimer}>
-          Start Timer
-        </button>
-        <button className="btn" onClick={stopTimer}>
-          Stop Timer
-        </button>
-        <button className="btn" onClick={resetGame}>
-          Reset Game
-        </button>
-      </div>
-      <div className="mt-4">
-        <p>Turns: {turns}</p>
-        <p>Timer: {timer}</p>
-      </div>
-    </div>
+    </>
   );
 };
 
