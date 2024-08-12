@@ -75,9 +75,6 @@ const Flashlight = () => {
           I really do care about you and your feelings. I love you more than I can
           say.
         </p>
-        <p className=" text-red-800 font-bold text-4xl">
-          I Love you Hnin Aye Wai...
-        </p>
       </div>
     </>
   );
