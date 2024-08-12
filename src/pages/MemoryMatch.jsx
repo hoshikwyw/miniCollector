@@ -24,7 +24,7 @@ const MemoryMatch = () => {
   return (
     <>
       <SubNavBar title="Memory Match Game" />
-      <div className=" min-h-[calc(100vh-190px)] bgShadow w-[45%] mx-auto m-5 p-10 flex flex-col">
+      <div className=" min-h-[calc(100vh-190px)] bgShadow w-[35%] mx-auto m-5 p-10 flex flex-col">
         <div className=" wrapper mx-auto">
           <ul className="cards">
             <li className="card">
