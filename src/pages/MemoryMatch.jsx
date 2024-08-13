@@ -7,6 +7,7 @@ const MemoryMatch = () => {
   const [flippedCards, setFlippedCards] = useState([])
   const [matchedCards, setMatchedCards] = useState([])
   const [moves, setMoves] = useState(0)
+  const [time, setTime] = useState(20)
 
   useEffect(() => {
     startNewGame()
