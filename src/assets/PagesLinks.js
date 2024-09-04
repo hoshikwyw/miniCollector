@@ -72,7 +72,7 @@ export const links = [
   {
     id: 11,
     linkName: "Piano",
-    to: "https://oro-piano.netlify.app/",
+    to: "/piano",
     image:
       "https://i.pinimg.com/474x/cb/33/76/cb337666e7be4409ee76ad3ca34179db.jpg",
   },
