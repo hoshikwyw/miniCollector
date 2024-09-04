@@ -19,6 +19,7 @@ import TextEditor from "../pages/TextEditor";
 import QrCodeGenerator from "../pages/QrCodeGenerator";
 import HangmanGame from "../pages/HangmanGame";
 import TypeTest from "../pages/TypeTest";
+import Piano from "../pages/Piano";
 
 const Path = () => {
   return (
@@ -44,6 +45,7 @@ const Path = () => {
           <Route path="/qrGenerate" element={<QrCodeGenerator />} />
           <Route path="/hangmanGame" element={<HangmanGame />} />
           <Route path="/typeTest" element={<TypeTest />} />
+          <Route path="/piano" element={<Piano />} />
         </Routes>
       </BrowserRouter>
     </div>
