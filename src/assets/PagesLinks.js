@@ -30,7 +30,7 @@ export const links = [
   {
     id: 5,
     linkName: "Meter Bill",
-    to: "https://meterbill-calculating-6def80.netlify.app/",
+    to: "/meterBill",
     image:
       "https://i.pinimg.com/564x/f1/31/49/f13149a99d24a4b909ba3d420b032e4b.jpg",
   },
